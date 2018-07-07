@@ -4,10 +4,10 @@ cli version
 Brief instructions for miner
 
 Miner is configured under 4 basic processor instructions
-avx
+AVX
 AVX2
 SSE4
-sse2
+SSE2
 
 Miner automatically switches to the new algorithm at the time of the hardfork.
 You can now start to mine using the new miner.
@@ -21,7 +21,16 @@ miner-sse4.exe --password <PASSWORD> --threads <THREADS> - url <URL> --username 
   
 for example (the pool administrator account pool.cryply.io):
 
-miner-sse4.exe -o layer: //pool.cryply.io: 3344 -u admin.u -p x -t 10
+miner-sse4.exe -o stratum://pool.cryply.io:3344 -u admin.u -p x -t 10
+
+or you can run miner with config file
+miner-sse4.exe -c conf.jsom
+
+conf.json example:
+
+{"host": "cryply.luckypool.org", "port": 9996, "username": "Donate.u", "password": "x"}
+or
+{"host": "cryply.luckypool.org", "port": 9996, "username": "Donate.u", "password": "x", "threads": 1} - with number of threads
 
 If you do not specify the number of cores, the miner himself determines what number of physical cores you have and starts to mine them
 After hardfork on logical cores it is not recommended to mine.
