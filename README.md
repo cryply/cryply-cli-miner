@@ -29,7 +29,9 @@ miner-sse4.exe -c conf.jsom
 conf.json example:
 
 {"host": "cryply.luckypool.org", "port": 9996, "username": "Donate.u", "password": "x"}
+
 or
+
 {"host": "cryply.luckypool.org", "port": 9996, "username": "Donate.u", "password": "x", "threads": 1} - with number of threads
 
 If you do not specify the number of cores, the miner himself determines what number of physical cores you have and starts to mine them
